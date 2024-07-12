@@ -8,7 +8,7 @@ export default function Footer() {
         Copyright aituring.club | Powered{" "}
         by
         <a
-          href="https://github.com/waveCodeSite"
+          href="mailto:jxdyxjt@163.com"
           target="_blank"
           rel="noreferrer"
           className="text-palette-primary font-bold px-1"

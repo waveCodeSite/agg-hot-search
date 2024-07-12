@@ -2,8 +2,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import { fetchShiCiDailyData } from "@/lib/api";
 
-export default function Nav() {
+export default async function Nav() {
+
+    let shiCiData: any = await fetchShiCiDailyData();
+
     return (
         <header className="border-b border-palette-lighter sticky top-0 z-20 bg-white">
           <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -16,8 +20,19 @@ export default function Nav() {
                   </span>
                 </h1>
             </Link>
-            {/* <div className="flex justify-end">
+            <div className="flex justify-end">
               <div className="mr-4">
+                <a
+                    href={shiCiData.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-palette-primary px-2"
+                    >
+                    {shiCiData.title}
+                    --- {shiCiData.chaodai}·{shiCiData.zuozhe}·《{shiCiData.chuzi}》
+                </a>
+              </div>
+              {/* <div className="mr-4">
                 <Link
                   href="https://github.com/liuyuhe666/agg-hot-search"
                   passHref
@@ -34,8 +49,8 @@ export default function Nav() {
                 >
                     <FontAwesomeIcon className="text-palette-primary w-6 m-auto" icon={faEnvelope} />
                 </Link>
-              </div>
-            </div> */}
+              </div> */}
+            </div>
           </div>
         </header >
     );
