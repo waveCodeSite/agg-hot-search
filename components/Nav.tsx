@@ -6,6 +6,7 @@ import Link from 'next/link';
 export default function Nav() {
     return (
         <header className="border-b border-palette-lighter sticky top-0 z-20 bg-white">
+          <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
           <div className="flex items-center justify-between m-4">
             <Link href="/" passHref className="cursor-pointer">
                 <h1 className="flex no-underline">
@@ -15,7 +16,7 @@ export default function Nav() {
                   </span>
                 </h1>
             </Link>
-            <div className="flex justify-end">
+            {/* <div className="flex justify-end">
               <div className="mr-4">
                 <Link
                   href="https://github.com/liuyuhe666/agg-hot-search"
@@ -34,7 +35,7 @@ export default function Nav() {
                     <FontAwesomeIcon className="text-palette-primary w-6 m-auto" icon={faEnvelope} />
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </header >
     );
