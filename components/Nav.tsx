@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
-import { fetchShiCiDailyData } from "@/lib/api";
+import { fetchHitokotoData } from "@/lib/api";
 
 export default async function Nav() {
 
@@ -22,15 +22,7 @@ export default async function Nav() {
             </Link>
             <div className="flex justify-end">
               <div className="mr-4">
-                <a
-                    href={shiCiData.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-palette-primary px-2"
-                    >
-                    {shiCiData.title}
-                    --- {shiCiData.chaodai}·{shiCiData.zuozhe}·《{shiCiData.chuzi}》
-                </a>
+                {data.hitokoto}
               </div>
               {/* <div className="mr-4">
                 <Link
