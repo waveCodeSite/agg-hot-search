@@ -1,9 +1,9 @@
-const BILI_API_URL = 'https://60s.viki.moe/bili';
-const WEIBO_API_URL = 'https://60s.viki.moe/weibo';
-const ZHIHU_API_URL = 'https://60s.viki.moe/zhihu';
-const TOUTIAO_API_URL = 'https://60s.viki.moe/toutiao';
-const DOUYIN_API_URL = 'https://60s.viki.moe/douyin';
-const TODAY_SUMMARY_API_URL = 'https://60s.viki.moe/60s?v2=1';
+const BILI_API_URL = 'https://60s-api.viki.moe/v2/bili';
+const WEIBO_API_URL = 'https://60s-api.viki.moe/v2/weibo';
+const ZHIHU_API_URL = 'https://60s-api.viki.moe/v2/zhihu';
+const TOUTIAO_API_URL = 'https://60s-api.viki.moe/v2/toutiao';
+const DOUYIN_API_URL = 'https://60s-api.viki.moe/v2/douyin';
+const TODAY_SUMMARY_API_URL = 'https://60s-api.viki.moe/v2/60s';
 const SHICI_DAILY_API_URL = 'https://www.meiriyiyan.com/api/v1';
 
 export async function fetchBiLiData() {
