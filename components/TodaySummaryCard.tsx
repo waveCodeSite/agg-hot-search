@@ -18,14 +18,14 @@ export default async function TodaySummaryCard() {
         </Link>
       </div>
       <div className="flex items-center justify-between mb-4">
-        <img src={data.cover}></img>
+          <h2>{data.date} {data.day_of_week}</h2>
       </div>
       <div className="flow-root">
         <ul
           role="list"
           className="divide-y divide-gray-200 dark:divide-gray-700"
         >
-          {data.news.splice(0, 6).map((item: any, index: number) => (
+          {data.news.splice(0, 9).map((item: any, index: number) => (
             <li className="py-3 sm:py-4" key={index}>
               <div className="flex items-center">
                 <div className="flex-shrink-0">
