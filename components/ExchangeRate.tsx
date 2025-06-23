@@ -1,14 +1,14 @@
-import { fetchBiLiData } from "@/lib/api";
+import {fetchExchangeRateData} from "@/lib/api";
 import Link from "next/link";
 
-export default async function BiLiCard() {
-    let data: Array<any> = await fetchBiLiData();
-    data = data.splice(0, 10);
+export default async function ExchangeRate() {
+    let data: Array<any> = await fetchExchangeRateData();
+    data = data.rates.splice(1, 10);
     return (
         <div className="w-full max-w-md p-4 m-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
             <div className="flex items-center justify-between mb-4">
-                <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">📺 哔哩哔哩</h5>
-                <Link href="/bili" className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">💱 今日人民币汇率</h5>
+                <Link href="/exchangerate" className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                     More
                 </Link>
             </div>
@@ -23,9 +23,7 @@ export default async function BiLiCard() {
                                         </div>
                                         <div className="flex-1 min-w-0 ms-4">
                                             <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                                <a href={item.link} target="_blank">
-                                                    {item.title}
-                                                </a>
+                                                {item.currency}: {item.rate}
                                             </p>
                                         </div>
                                     </div>

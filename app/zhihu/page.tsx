@@ -11,7 +11,7 @@ export default async function Page() {
                 <div className="flow-root">
                     <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
                         {
-                            data.map((item: any, index: number) => 
+                            data.map((item: any, index: number) =>
                                 <li className="py-3 sm:py-4" key={item.query}>
                                 <div className="flex items-center">
                                     <div className="flex-shrink-0">
@@ -19,8 +19,8 @@ export default async function Page() {
                                     </div>
                                     <div className="flex-1 min-w-0 ms-4">
                                         <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                            <a href={'https://www.zhihu.com/search?q=' + item.query} target="_blank">
-                                                {item.display_query}
+                                            <a href={item.link} target="_blank">
+                                                {item.title}
                                             </a>
                                         </p>
                                     </div>

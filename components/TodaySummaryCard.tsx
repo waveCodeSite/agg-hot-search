@@ -26,7 +26,7 @@ export default async function TodaySummaryCard() {
           className="divide-y divide-gray-200 dark:divide-gray-700"
         >
           {data.news.splice(0, 6).map((item: any, index: number) => (
-            <li className="py-3 sm:py-4" key={index + 1}>
+            <li className="py-3 sm:py-4" key={index}>
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <span className="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">

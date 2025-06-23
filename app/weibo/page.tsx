@@ -11,7 +11,7 @@ export default async function Page() {
                 <div className="flow-root">
                     <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
                         {
-                            data.map((item: any, index: number) => 
+                            data.map((item: any, index: number) =>
                                 <li className="py-3 sm:py-4" key={item.mid}>
                                 <div className="flex items-center">
                                     <div className="flex-shrink-0">
@@ -19,7 +19,7 @@ export default async function Page() {
                                     </div>
                                     <div className="flex-1 min-w-0 ms-4">
                                         <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                            <a href={'https://s.weibo.com/weibo?q=' + item.word} target="_blank">
+                                            <a href={item.link} target="_blank">
                                                 {item.word}
                                             </a>
                                         </p>

@@ -15,15 +15,15 @@ export default async function WeiBoCard() {
             <div className="flow-root">
                 <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
                             {
-                                data.map((item: any, index: number) => 
-                                    <li className="py-3 sm:py-4" key={item.mid}>
+                                data.map((item: any, index: number) =>
+                                    <li className="py-3 sm:py-4" key={index}>
                                     <div className="flex items-center">
                                         <div className="flex-shrink-0">
                                         <span className="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{index + 1}</span>
                                         </div>
                                         <div className="flex-1 min-w-0 ms-4">
                                             <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                                <a href={'https://s.weibo.com/weibo?q=' + item.title} target="_blank">
+                                                <a href={item.link} target="_blank">
                                                     {item.title}
                                                 </a>
                                             </p>

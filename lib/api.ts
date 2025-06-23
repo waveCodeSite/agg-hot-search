@@ -6,6 +6,7 @@ const DOUYIN_API_URL = 'https://60s-api.viki.moe/v2/douyin';
 const TODAY_SUMMARY_API_URL = 'https://60s-api.viki.moe/v2/60s';
 // const SHICI_DAILY_API_URL = 'https://www.meiriyiyan.com/api/v1';
 const HITOKOTO_API_URL = 'https://60s-api.viki.moe/v2/hitokoto';
+const EXCHANGE_RATE_API_URL = 'https://60s-api.viki.moe/v2/exchange_rate';
 
 export async function fetchBiLiData() {
     const res = await fetch(BILI_API_URL, {cache: 'no-store'});
@@ -69,6 +70,16 @@ export async function fetchTodaySummaryData() {
 
 export async function fetchHitokotoData() {
     const res = await fetch(HITOKOTO_API_URL, {cache: 'no-store'});
+    const json = await res.json();
+    if (json.errors) {
+        console.log(json.errors);
+        throw new Error("Failed to fetch data");
+    }
+    return json.data;
+}
+
+export async function fetchExchangeRateData() {
+    const res = await fetch(EXCHANGE_RATE_API_URL, {cache: 'no-store'});
     const json = await res.json();
     if (json.errors) {
         console.log(json.errors);
