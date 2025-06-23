@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default async function ExchangeRate() {
     let data: Array<any> = await fetchExchangeRateData();
-    data = data.rates.splice(1, 10);
+    data = data.splice(1, 10);
     return (
         <div className="w-full max-w-md p-4 m-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
             <div className="flex items-center justify-between mb-4">

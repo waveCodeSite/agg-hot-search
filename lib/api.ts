@@ -85,7 +85,7 @@ export async function fetchExchangeRateData() {
         console.log(json.errors);
         throw new Error("Failed to fetch data");
     }
-    return json.data;
+    return json.data.rates;
 }
 
 // export async function fetchShiCiDailyData() {

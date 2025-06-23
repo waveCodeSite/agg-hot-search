@@ -2,7 +2,7 @@ import {fetchExchangeRateData} from "@/lib/api";
 
 export default async function Page() {
     let data: Array<any> = await fetchExchangeRateData();
-    data = data.rates;
+    data = data;
     return (
         <main className="flex min-h-screen flex-col items-center justify-between mt-4">
             <div className="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -13,7 +13,7 @@ export default async function Page() {
                     <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
                         {
                             data.map((item: any, index: number) =>
-                                <li className="py-3 sm:py-4" key={item.query}>
+                                <li className="py-3 sm:py-4" key={index}>
                                 <div className="flex items-center">
                                     <div className="flex-shrink-0">
                                     <span className="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{index + 1}</span>
