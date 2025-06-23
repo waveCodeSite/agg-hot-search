@@ -6,7 +6,7 @@ import { fetchHitokotoData } from "@/lib/api";
 
 export default async function Nav() {
 
-    let shiCiData: any = await fetchShiCiDailyData();
+    let hitokotoData: any = await fetchHitokotoData();
 
     return (
         <header className="border-b border-palette-lighter sticky top-0 z-20 bg-white">
@@ -22,7 +22,7 @@ export default async function Nav() {
             </Link>
             <div className="flex justify-end">
               <div className="mr-4">
-                {data.hitokoto}
+                {hitokotoData.hitokoto}
               </div>
               {/* <div className="mr-4">
                 <Link
