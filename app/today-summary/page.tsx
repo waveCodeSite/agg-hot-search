@@ -9,9 +9,9 @@ export default async function Page() {
             🌍 每天 60s 读懂世界
           </h5>
         </div>
-        <div className="flex items-center justify-between mb-4">
-          <img src={data.cover}></img>
-        </div>
+        {/*<div className="flex items-center justify-between mb-4">*/}
+        {/*  <img src={data.cover}></img>*/}
+        {/*</div>*/}
         <div className="flow-root">
           <ul
             role="list"
